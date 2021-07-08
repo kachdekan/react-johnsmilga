@@ -1,8 +1,13 @@
 import React from "react";
 import ReactDom from "react-dom";
 
-// CSS
+//JSX and Props
 import "./index.css";
+const title = "I Love You to the Moon and Back";
+const author = "Amalia Hepworth";
+const imgsrc =
+  "https://images-na.ssl-images-amazon.com/images/I/81eB%2B7%2BCkUL._AC_UL200_SR200,200_.jpg";
+const imgalt = "i love you to the moon";
 
 function BookList() {
   return (
@@ -20,31 +25,10 @@ function BookList() {
 const Book = () => {
   return (
     <article className="book">
-      <Image />
-      <Title />
-      <Author />
+      <img src={imgsrc} alt={imgalt} />
+      <h1>{title}</h1>
+      <h4>{author.toUpperCase()}</h4>
     </article>
-  );
-};
-
-const Image = () => {
-  return (
-    <img
-      src="https://images-na.ssl-images-amazon.com/images/I/81eB%2B7%2BCkUL._AC_UL200_SR200,200_.jpg"
-      alt="i love you to the moon"
-    />
-  );
-};
-
-const Title = () => {
-  return <h1>I Love You to the Moon and Back</h1>;
-};
-
-const Author = () => {
-  return (
-    <h4 style={{ color: "#617d98", fontSize: "0.75rem", marginTop: "0.75rem" }}>
-      Amalia Hepworth
-    </h4>
   );
 };
 
