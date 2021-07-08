@@ -35,24 +35,14 @@ function BookList() {
     <section className="booklist">
       {books.map((book) => {
         // const { imgsrc, imgalt, title, author } = book;
-        return <Book key={book.id} {...book}></Book>;
+        return <AltBook key={book.id} {...book}></AltBook>;
       })}
     </section>
   );
 }
 
-const Book = (props) => {
-  const { imgsrc, imgalt, title, author } = props;
-  return (
-    <article className="book">
-      <img src={imgsrc} alt={imgalt} />
-      <h1>{title}</h1>
-      <h4>{author}</h4>
-    </article>
-  );
-};
-
-// const AltBook = ({ imgsrc, imgalt, title, author }) => {
+// const Book = (props) => {
+//   const { imgsrc, imgalt, title, author } = props;
 //   return (
 //     <article className="book">
 //       <img src={imgsrc} alt={imgalt} />
@@ -61,5 +51,33 @@ const Book = (props) => {
 //     </article>
 //   );
 // };
+
+const AltBook = ({ imgsrc, imgalt, title, author }) => {
+  // attribute, eventHandler
+  // onlick, onMouseOver
+  const clickHandler = (e) => {
+    console.log(e);
+    console.log(e.target);
+    alert("hello world");
+  };
+
+  const complexHandler = (author) => {
+    console.log(author);
+  };
+
+  return (
+    <article className="book">
+      <img src={imgsrc} alt={imgalt} />
+      <h1 onClick={() => console.log(title)}>{title}</h1>
+      <h4>{author}</h4>
+      <button type="button" onClick={clickHandler}>
+        Click Me
+      </button>
+      <button type="button" onClick={() => complexHandler(author)}>
+        Complex Ex
+      </button>
+    </article>
+  );
+};
 
 ReactDom.render(<BookList />, document.getElementById("root"));
