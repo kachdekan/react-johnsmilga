@@ -41,7 +41,11 @@ const Title = () => {
 };
 
 const Author = () => {
-  return <h4>Amalia Hepworth</h4>;
+  return (
+    <h4 style={{ color: "#617d98", fontSize: "0.75rem", marginTop: "0.75rem" }}>
+      Amalia Hepworth
+    </h4>
+  );
 };
 
 ReactDom.render(<BookList />, document.getElementById("root"));
