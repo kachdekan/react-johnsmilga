@@ -10,11 +10,13 @@ const firstBook = {
   title: "Paint by Sticker Kids: Zoo Animals",
   author: "Workman Publishing",
 };
-const title = "I Love You to the Moon and Back";
-const author = "Amalia Hepworth";
-const imgsrc =
-  "https://images-na.ssl-images-amazon.com/images/I/81eB%2B7%2BCkUL._AC_UL200_SR200,200_.jpg";
-const imgalt = "i love you to the moon";
+const secondBook = {
+  imgsrc:
+    "https://images-na.ssl-images-amazon.com/images/I/81eB%2B7%2BCkUL._AC_UL200_SR200,200_.jpg",
+  imgalt: "i love you to the moon",
+  title: "I Love You to the Moon and Back",
+  author: "Amalia Hepworth",
+};
 
 function BookList() {
   return (
@@ -25,7 +27,12 @@ function BookList() {
         title={firstBook.title}
         author={firstBook.author}
       />
-      <Book imgsrc={imgsrc} imgalt={imgalt} title={title} author={author} />
+      <Book
+        imgsrc={secondBook.imgsrc}
+        imgalt={secondBook.imgalt}
+        title={secondBook.title}
+        author={secondBook.author}
+      />
     </section>
   );
 }
@@ -37,7 +44,6 @@ const Book = (props) => {
       <img src={props.imgsrc} alt={props.imgalt} />
       <h1>{props.title}</h1>
       <h4>{props.author}</h4>
-      <p>{props.job}</p>
     </article>
   );
 };
