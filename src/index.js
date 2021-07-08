@@ -27,7 +27,7 @@ function BookList() {
         title={firstBook.title}
         author={firstBook.author}
       />
-      <Book
+      <AltBook
         imgsrc={secondBook.imgsrc}
         imgalt={secondBook.imgalt}
         title={secondBook.title}
@@ -38,12 +38,22 @@ function BookList() {
 }
 
 const Book = (props) => {
-  console.log(props);
+  const { imgsrc, imgalt, title, author } = props;
   return (
     <article className="book">
-      <img src={props.imgsrc} alt={props.imgalt} />
-      <h1>{props.title}</h1>
-      <h4>{props.author}</h4>
+      <img src={imgsrc} alt={imgalt} />
+      <h1>{title}</h1>
+      <h4>{author}</h4>
+    </article>
+  );
+};
+
+const AltBook = ({ imgsrc, imgalt, title, author }) => {
+  return (
+    <article className="book">
+      <img src={imgsrc} alt={imgalt} />
+      <h1>{title}</h1>
+      <h4>{author}</h4>
     </article>
   );
 };
