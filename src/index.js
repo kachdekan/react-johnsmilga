@@ -3,19 +3,8 @@ import ReactDom from "react-dom";
 
 // Nested Components. React Tools
 
-function Greeting() {
-  return (
-    <div>
-      <Person />
-      <Message />
-    </div>
-  );
+function BookList() {
+  return <section>This is a booklist</section>;
 }
 
-const Person = () => <h2>John Doe</h2>;
-
-const Message = () => {
-  return <p>this is my message</p>;
-};
-
-ReactDom.render(<Greeting />, document.getElementById("root"));
+ReactDom.render(<BookList />, document.getElementById("root"));
