@@ -11,6 +11,9 @@
 # production
 /build
 
+# switch btwn tuts and project
+/src/tutorial
+
 # misc
 .DS_Store
 .env.local
