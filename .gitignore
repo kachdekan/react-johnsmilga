@@ -10,7 +10,6 @@
 
 # production
 /build
-/src/tutorial
 
 # misc
 .DS_Store
