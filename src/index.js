@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./projects/02-our-tours/setup/tours.css";
+import "./projects/03-our-reviews/setup/index.css";
 import App from "./App";
 
 ReactDOM.render(
