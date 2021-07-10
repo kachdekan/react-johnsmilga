@@ -1,17 +1,8 @@
-import React from "react";
-import Review from "./projects/03-our-reviews/setup/Review";
+import React, { useState } from "react";
+import data from "./projects/04-accordion/setup/data";
+import SingleQuestion from "./projects/04-accordion/setup/Question";
 function App() {
-  return (
-    <main>
-      <section className="container">
-        <div className="title">
-          <h2>our reviews</h2>
-          <div className="underline"></div>
-        </div>
-        <Review />
-      </section>
-    </main>
-  );
+  return <h2>accordion project setup</h2>;
 }
 
 export default App;
