@@ -1,35 +1,9 @@
-## Corresponding Projects
 
-#### useState
+# React Full Course by John Smilga
 
-1. Birthday Reminder
+Learning Fundamentals, Hooks, Context API, React Router, Custom Hooks etc.
 
-#### useEffect and Conditional Rendering
+✏️ Course from John Smilga of the Coding Addict channel. Check out his channel: https://www.youtube.com/codingaddict
 
-2. Tours
-3. Reviews
-4. Accordion
-5. Menu
-6. Tabs
-7. Slider
+💻 Advanced React: https://github.com/john-smilga/react-advanced-2020
 
-#### Forms
-
-8. Lorem Ipsum Generator
-9. Color Shades Generator
-10. Grocery Bud
-
-#### useRef
-
-11. Navbar
-
-#### useContext
-
-12. Modal and Sidebar
-13. Stripe Menus
-
-#### useReducer and useContext
-
-14. Cart
-
-#### React Router
