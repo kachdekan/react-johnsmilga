@@ -15,6 +15,20 @@ const reducer = (state, action) => {
   if (action.type === "NO_VALUE") {
     return { ...state, isModalOpen: true, modalContent: "please enter value" };
   }
+  if (action.type === "CLOSE_MODAL") {
+    return { ...state, isModalOpen: false };
+  }
+  if (action.type === "REMOVE_ITEM") {
+    const newPeople = state.people.filter(
+      (person) => person.id !== action.payload
+    );
+    return {
+      ...state,
+      people: newPeople,
+      isModalOpen: true,
+      modalContent: "item removed",
+    };
+  }
   throw new Error("no matching action type");
 };
 const defaultState = {
@@ -22,6 +36,7 @@ const defaultState = {
   isModalOpen: false,
   modalContent: "hey there",
 };
+
 const Index = () => {
   const [name, setName] = useState("");
   const [state, dispatch] = useReducer(reducer, defaultState);
@@ -35,10 +50,15 @@ const Index = () => {
       dispatch({ type: "NO_VALUE" });
     }
   };
+  const closeModal = () => {
+    dispatch({ type: "CLOSE_MODAL" });
+  };
 
   return (
     <React.Fragment>
-      {state.isModalOpen && <Modal modalContent={state.modalContent} />}
+      {state.isModalOpen && (
+        <Modal modalContent={state.modalContent} closeModal={closeModal} />
+      )}
       <form action="" onSubmit={handleSubmit} className="form">
         <div>
           <input
@@ -52,8 +72,15 @@ const Index = () => {
       {state.people.map((person) => {
         const { id, name } = person;
         return (
-          <div key={id}>
+          <div key={id} className="item">
             <h4>{name}</h4>
+            <button
+              onClick={() =>
+                dispatch({ type: "REMOVE_ITEM", payload: person.id })
+              }
+            >
+              remove
+            </button>
           </div>
         );
       })}
