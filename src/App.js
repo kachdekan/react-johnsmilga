@@ -1,48 +1,9 @@
-import React, { useState } from "react";
-import SingleColor from "./projects/09-color-picker/setup/SingleColor";
-
-import Values from "values.js";
+import React, { useState, useEffect } from "react";
+import List from "./projects/10-grocery-bud/setup/List";
+import Alert from "./projects/10-grocery-bud/setup/Alert";
 
 function App() {
-  const [color, setColor] = useState("");
-  const [error, setError] = useState(false);
-  const [list, setList] = useState(new Values("#f15025").all(10));
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    try {
-      let colors = new Values(color).all(10);
-      console.log(colors);
-      setList(colors);
-    } catch (error) {
-      setError(true);
-    }
-  };
-
-  return (
-    <React.Fragment>
-      <section className="container">
-        <h3>color generator</h3>
-        <form action="" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            value={color}
-            onChange={(e) => setColor(e.target.value)}
-            placeholder="#f15025"
-            className={`${error ? "error" : null}`}
-          />
-          <button type="submit" className="btn">
-            submit
-          </button>
-        </form>
-      </section>
-      <section className="colors">
-        {list.map((color, index) => {
-          return <SingleColor key={index} {...color} index={index} />;
-        })}
-      </section>
-    </React.Fragment>
-  );
+  return <h2>grocery bud setup</h2>;
 }
 
 export default App;
