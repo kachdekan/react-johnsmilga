@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./projects/08-lorem-ipsum/setup/index.css";
+import "./projects/09-color-picker/setup/index.css";
 import App from "./App";
 
 ReactDOM.render(
