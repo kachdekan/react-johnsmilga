@@ -1,11 +1,14 @@
 import React from "react";
-import Navbar from "./projects/11-navbar/setup/Navbar";
-
+import Modal from "./projects/12-sidebar-modal/setup/Modal";
+import Sidebar from "./projects/12-sidebar-modal/setup/Sidebar";
+import Home from "./projects/12-sidebar-modal/setup/Home";
 function App() {
   return (
-    <React.Fragment>
-      <Navbar />
-    </React.Fragment>
+    <>
+      <Home />
+      <Modal />
+      <Sidebar />
+    </>
   );
 }
 
