@@ -1,13 +1,12 @@
 import React from "react";
-import Modal from "./projects/12-sidebar-modal/setup/Modal";
-import Sidebar from "./projects/12-sidebar-modal/setup/Sidebar";
-import Home from "./projects/12-sidebar-modal/setup/Home";
+import Navbar from "./projects/13-Stripe-submenus/setup/Navbar";
+import Hero from "./projects/13-Stripe-submenus/setup/Hero";
+import Sidebar from "./projects/13-Stripe-submenus/setup/Sidebar";
+import Submenu from "./projects/13-Stripe-submenus/setup/Submenu";
 function App() {
   return (
     <>
-      <Home />
-      <Modal />
-      <Sidebar />
+      <h2>stripe submenus setup</h2>
     </>
   );
 }
