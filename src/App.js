@@ -1,16 +1,24 @@
 import React from "react";
-import Navbar from "./projects/13-Stripe-submenus/setup/Navbar";
-import Hero from "./projects/13-Stripe-submenus/setup/Hero";
-import Sidebar from "./projects/13-Stripe-submenus/setup/Sidebar";
-import Submenu from "./projects/13-Stripe-submenus/setup/Submenu";
+import { useGlobalContext } from "./projects/14-shopping-cart/setup/context";
+
+// components
+import Navbar from "./projects/14-shopping-cart/setup/Navbar";
+import CartContainer from "./projects/14-shopping-cart/setup/CartContainer";
+// items
+
 function App() {
+  // if (loading) {
+  //   return (
+  //     <div className='loading'>
+  //       <h1>Loading...</h1>
+  //     </div>
+  //   )
+  // }
   return (
-    <>
+    <main>
       <Navbar />
-      <Sidebar />
-      <Hero />
-      <Submenu />
-    </>
+      <CartContainer />
+    </main>
   );
 }
 
