@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./projects/14-shopping-cart/setup//index.css";
+import "./projects/15-cocktails/setup/index.css";
 import App from "./App";
-import { AppProvider } from "./projects/14-shopping-cart/setup/context";
+import { AppProvider } from "./projects/15-cocktails/setup/context";
 
 ReactDOM.render(
   <React.StrictMode>

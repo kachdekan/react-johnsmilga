@@ -1,25 +1,17 @@
 import React from "react";
-import { useGlobalContext } from "./projects/14-shopping-cart/setup/context";
-
-// components
-import Navbar from "./projects/14-shopping-cart/setup/Navbar";
-import CartContainer from "./projects/14-shopping-cart/setup/CartContainer";
-// items
-
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// import pages
+import Home from "./projects/15-cocktails/setup/pages/Home";
+import About from "./projects/15-cocktails/setup/pages/About";
+import SingleCocktail from "./projects/15-cocktails/setup/pages/SingleCocktail";
+import Error from "./projects/15-cocktails/setup/pages/Error";
+// import components
+import Navbar from "./projects/15-cocktails/setup/components/Navbar";
 function App() {
-  const { loading } = useGlobalContext();
-  if (loading) {
-    return (
-      <div className="loading">
-        <h1>Loading...</h1>
-      </div>
-    );
-  }
   return (
-    <main>
-      <Navbar />
-      <CartContainer />
-    </main>
+    <div>
+      <h2>app component</h2>
+    </div>
   );
 }
 
